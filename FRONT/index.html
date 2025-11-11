@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HardwareRevive — Informe del Sistema</title>
+  <meta name="description" content="HardwareRevive — Sistema de gestión y recolección de hardware para reciclaje y reutilización." />
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <div class="logo">HR</div>
+        <div>
+          <h1>HardwareRevive</h1>
+          <p>Gestión de recolección y clasificación de hardware — Informe técnico</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#alcance">Alcance</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Informe: Sistema de Gestión de Recolección de Hardware</h2>
+          <p class="lead">
+            Plataforma propuesta para registrar solicitudes, clasificar equipos y generar reportes de reciclaje y reutilización.
+          </p>
+          <div class="cta-list">
+            <button class="btn" onclick="scrollToSection('arquitectura')">Ver arquitectura</button>
+            <button class="btn ghost" onclick="scrollToSection('alcance')">Alcance</button>
+          </div>
+        </div>
+        <aside class="summary">
+          <h3>Resumen ejecutivo</h3>
+          <ul>
+            <li>Registro de usuarios y solicitudes.</li>
+            <li>Clasificación de hardware recolectado.</li>
+            <li>Generación de reportes resumidos.</li>
+            <li>Arquitectura ligera: SQLite + API REST.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="sobre" class="card">
+        <h3>Sobre el proyecto</h3>
+        <p>
+          HardwareRevive busca reducir el impacto ambiental mediante la recolección, clasificación y reutilización de componentes electrónicos.
+        </p>
+      </section>
+
+      <section id="alcance" class="card">
+        <h3>Alcance y funcionalidades</h3>
+        <ul>
+          <li>CRUD de usuarios y solicitudes.</li>
+          <li>Inventario y clasificación de hardware.</li>
+          <li>Reportes con estadísticas resumidas.</li>
+        </ul>
+      </section>
+
+      <section id="arquitectura" class="card">
+        <h3>Arquitectura del sistema</h3>
+        <p>
+          La solución está basada en tres capas: base de datos SQLite, API REST (Flask o Node.js), y una interfaz web CRUD.
+        </p>
+        <div class="er">
+          <div class="entity">
+            <h4>users</h4>
+            <div class="attr">id (PK), nombre, email, rol</div>
+          </div>
+          <div class="entity">
+            <h4>requests</h4>
+            <div class="attr">id (PK), user_id, direccion, estado</div>
+          </div>
+          <div class="entity">
+            <h4>hardwares</h4>
+            <div class="attr">id, tipo, marca, modelo, estado</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipo" class="card">
+        <h3>Equipo</h3>
+        <div class="team">
+          <div class="person"><h5>Ricardo Román</h5><p>Desarrollador</p></div>
+          <div class="person"><h5>Gustavo Medina</h5><p>Analista</p></div>
+          <div class="person"><h5>Juan Pérez</h5><p>QA / Tester</p></div>
+        </div>
+      </section>
+
+      <section id="contacto" class="card">
+        <h3>Contacto</h3>
+        <p>Correo: <a href="mailto:info@hardwarerevive.cl">info@hardwarerevive.cl</a></p>
+        <p>Teléfono: +56 9 0000 0000</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 HardwareRevive — Informe y prototipo técnico</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+:root{--bg:#f6f9ff;--card:#fff;--accent:#1967d2;--muted:#6b7887;--border:#e6eefc}
+*{box-sizing:border-box;font-family:Inter,system-ui,Arial}
+body{margin:0;background:var(--bg);color:#072036;padding:18px}
+.wrap{max-width:1000px;margin:0 auto}
+header h1{margin:0;color:var(--accent)}
+.muted{color:var(--muted);font-size:13px}
+main{display:flex;gap:14px;margin-top:14px}
+.sidebar{width:220px;background:var(--card);border:1px solid var(--border);padding:12px;border-radius:10px}
+.nav-btn{display:block;width:100%;padding:8px;border-radius:8px;border:0;background:transparent;text-align:left;color:var(--accent);cursor:pointer;margin-bottom:8px}
+.nav-btn.active{background:#eef6ff}
+.content{flex:1}
+.view{background:var(--card);border:1px solid var(--border);padding:12px;border-radius:10px}
+.hidden{display:none}
+.form-inline{display:flex;gap:8px;align-items:center}
+.form-inline input{padding:8px;border:1px solid var(--border);border-radius:6px}
+.form-inline button{padding:8px 10px;background:var(--accent);color:#fff;border-radius:6px;border:0}
+.table-wrap{margin-top:12px;max-height:420px;overflow:auto;border-top:1px dashed #f0f6ff;padding-top:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid #f3f7ff;text-align:left;font-size:14px}
+.btn-ghost{background:transparent;border:1px solid var(--border);padding:6px 8px;border-radius:6px;color:var(--accent);cursor:pointer}
+.card-mini{background:#fbfeff;padding:8px;border:1px solid #eef6ff;border-radius:8px;margin-bottom:8px}

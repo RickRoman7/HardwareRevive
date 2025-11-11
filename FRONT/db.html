@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HardwareRevive — Panel DB local</title>
+  <link rel="stylesheet" href="css/db.css">
+  <script src="js/db.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>HardwareRevive — Panel DB (local)</h1>
+      <p class="muted">Datos guardados en <strong>localStorage</strong> del navegador. Sin servidor.</p>
+    </header>
+
+    <main>
+      <nav class="sidebar">
+        <button data-view="users" class="nav-btn active">Usuarios</button>
+        <button data-view="requests" class="nav-btn">Solicitudes</button>
+        <button data-view="hardwares" class="nav-btn">Hardwares</button>
+        <button data-view="reports" class="nav-btn">Reportes</button>
+        <div style="height:1px;background:#eef6ff;margin:8px 0"></div>
+        <button id="btn-reset" class="nav-btn">Reset local (borrar datos)</button>
+      </nav>
+
+      <section class="content">
+        <div id="view-users" class="view">
+          <h2>Usuarios</h2>
+          <form id="form-create-user" class="form-inline">
+            <input name="nombre" placeholder="Nombre" required />
+            <input name="email" placeholder="Email" required />
+            <button type="submit">Crear</button>
+          </form>
+          <div id="users-list" class="table-wrap"></div>
+        </div>
+
+        <div id="view-requests" class="view hidden">
+          <h2>Solicitudes</h2>
+          <div class="panel">
+            <label>Usuario (id): <input id="req-user-id" type="number" min="1" /></label>
+            <button id="btn-create-request" class="btn-ghost">Crear solicitud para id</button>
+            <div id="requests-list" class="table-wrap"></div>
+          </div>
+        </div>
+
+        <div id="view-hardwares" class="view hidden">
+          <h2>Hardwares</h2>
+          <div class="panel">
+            <label>Solicitud (id): <input id="hw-request-id" type="number" min="1" /></label>
+            <button id="btn-show-hw" class="btn-ghost">Mostrar / Añadir</button>
+            <div id="hardwares-root" style="margin-top:10px"></div>
+          </div>
+        </div>
+
+        <div id="view-reports" class="view hidden">
+          <h2>Reportes</h2>
+          <div class="panel">
+            <button id="btn-gen-report" class="btn-ghost">Generar reporte resumen</button>
+            <div id="reports-list" class="table-wrap"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small class="muted">Haz pruebas, los datos quedan en tu navegador. Usa 'Reset local' para borrar.</small>
+    </footer>
+  </div>
+</body>
+</html>

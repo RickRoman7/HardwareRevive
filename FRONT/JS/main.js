@@ -1,10 +1,7 @@
-function scrollToSection(id) {
+function scrollToSection(id){
   const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  if(el) el.scrollIntoView({behavior:'smooth'});
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("HardwareRevive: Página cargada correctamente.");
+document.addEventListener('DOMContentLoaded', ()=> {
+  console.log('Página principal lista.');
 });
